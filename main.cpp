@@ -79,7 +79,32 @@ public:
     friend int nrcoloane(matrice&);
     friend int nrelemente(matrice&);
 
+    friend istream &operator>> (istream &, matrice &);
+    friend ostream &operator<< (ostream &, matrice &);
+
 };
+istream &operator>> (istream &in, matrice& a)
+{
+    in>>a.nr_l;
+    in>>a.nr_c;
+    a.v = new double*[a.nr_l];
+    for(int i=0; i<a.nr_c; i++)
+        a.v[i]=new double[a.nr_c];
+    for(int i=0; i<a.nr_l; i++)
+        for(int j=0; j<a.nr_c; j++)
+            in>>a.v[i][j];
+}
+
+ostream &operator<< (ostream &out, matrice &a)
+{
+    out<<a.nr_l<<" "<<a.nr_c<<endl;
+    for(int i=0;i<a.nr_l;i++)
+    {for(int j=0;j<a.nr_c;j++)
+        out<<a.v[i][j]<<" ";
+        out<<endl;
+    }
+    return out;
+}
 matrice::matrice()
 {
     nr_l=0;
@@ -590,14 +615,8 @@ int nrelemente(matrice& a)
 int main()
 {
     matrice x,y,o;
-    x.citire();
-    cout<<nrelemente(x)<<endl;
-    double *u;
-    u=new double[3];
-    if(x>u)
-        cout<<"Y";
-    else
-        cout<<"N";
+    cin>>x;
+    cout<<x;
 
 
 }
