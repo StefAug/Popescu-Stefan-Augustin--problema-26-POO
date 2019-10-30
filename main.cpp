@@ -48,27 +48,27 @@ public:
 
     friend bool operator == (matrice& ob1,matrice& ob2);
     friend bool operator == (matrice& ob1,double*);
-    friend bool operator == (double*,matrice& ob2);
+    friend bool operator == (double*,matrice& ob1);
 
     friend bool operator != (matrice& ob1,matrice& ob2);
     friend bool operator != (matrice& ob1,double*);
-    friend bool operator != (double*,matrice& ob2);
+    friend bool operator != (double*,matrice& ob1);
 
     friend bool operator < (matrice& ob1,matrice& ob2);
     friend bool operator < (matrice& ob1,double*);
-    friend bool operator < (double*,matrice& ob2);
+    friend bool operator < (double*,matrice& ob1);
 
     friend bool operator <= (matrice& ob1,matrice& ob2);
     friend bool operator <= (matrice& ob1,double*);
-    friend bool operator <= (double*,matrice& ob2);
+    friend bool operator <= (double*,matrice& ob1);
 
     friend bool operator > (matrice& ob1,matrice& ob2);
     friend bool operator > (matrice& ob1,double*);
-    friend bool operator > (double*,matrice& ob2);
+    friend bool operator > (double*,matrice& ob1);
 
     friend bool operator >= (matrice& ob1,matrice& ob2);
     friend bool operator >= (matrice& ob1,double*);
-    friend bool operator >= (double*,matrice& ob2);
+    friend bool operator >= (double*,matrice& ob1);
 
     friend bool operator ! (matrice& ob1);
     //friend matrice& operator ~ (matrice& ob1); //am incercat dar nu imi iese la afisare, imi iese ori aiurea ori imi da crash
