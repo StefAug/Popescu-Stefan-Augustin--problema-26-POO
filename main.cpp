@@ -93,6 +93,7 @@ istream &operator>> (istream &in, matrice& a)
     for(int i=0; i<a.nr_l; i++)
         for(int j=0; j<a.nr_c; j++)
             in>>a.v[i][j];
+    return in;
 }
 
 ostream &operator<< (ostream &out, matrice &a)
